@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "by Tako",
+    "name": "Broblock [R]",
+    "uuid": "dea10822-e28d-43fe-991c-253b9caec371",
+    "version": [0, 1, 0],
+    "min_engine_version": [1, 17, 0]
+  },
+  "modules": [
+    {
+      "description": "by Tako",
+      "type": "resources",
+      "uuid": "1dfec752-30ef-442d-b96d-6180ef5656b8",
+      "version": [0, 1, 0]
+    }
+  ]
+}

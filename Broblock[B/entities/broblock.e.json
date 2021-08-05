@@ -1,0 +1,131 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "brocraft:broblock",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "brocraft:sensor": {
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "is_altitude",
+                    "subject": "self",
+                    "operator": ">",
+                    "value": 256
+                  },
+                  {
+                    "test": "is_altitude",
+                    "subject": "self",
+                    "operator": "<",
+                    "value": 0
+                  }
+                ]
+              },
+              "target": "self",
+              "event": "brocraft:despawn"
+            }
+          ]
+        }
+      },
+      "brocraft:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["brocraft:sensor"]
+        }
+      },
+      "brocraft:despawn": {
+        "add": {
+          "component_groups": ["brocraft:despawn"]
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["majestic_blocks"]
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:push_through": {
+        "value": 1
+      },
+      "minecraft:collision_box": {
+        "width": 0.2,
+        "height": 0.2
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "deals_damage": false,
+            "cause": "all"
+          }
+        ]
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_altitude",
+                  "subject": "self",
+                  "operator": ">",
+                  "value": 256
+                },
+                {
+                  "test": "is_altitude",
+                  "subject": "self",
+                  "operator": "<",
+                  "value": 0
+                }
+              ]
+            },
+            "target": "self",
+            "event": "brocraft:despawn"
+          }
+        ]
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "interact_text": "action.interact.pickup",
+            "on_interact": {
+              "filters": {
+                "test": "is_sneaking",
+                "subject": "player",
+                "operator": "equals",
+                "value": false
+              },
+              "target": "self",
+              "event": "brocraft:despawn"
+            },
+            "play_sounds": "pop",
+            "spawn_items": {
+              "table": "loot_tables/broblock.json"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

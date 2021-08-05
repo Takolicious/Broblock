@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+      "description": {
+        "identifier": "brocraft:broblock",
+        "materials": {"default": "entity_alphatest"},
+        "textures": {
+            "default": "textures/entity/broblock"
+        },
+        "geometry": {
+            "default": "geometry.brocraft_broblock"
+        },
+        "animations": {
+            "spinning": "animation.brocraft.broblock.spinning"
+        },
+        "scripts": {
+            "animate": [ "spinning" ]
+        },
+        "enable_attachables": false,
+        "render_controllers": [ 
+            "controller.render.brocraft.broblock"
+        ]
+    }
+  }
+}
