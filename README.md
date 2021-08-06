@@ -74,4 +74,4 @@ Copy the contents under `"groups": []` into `Broblock [B]/trading/economy_trades
 }
 ```
 
-Convert the files into a .mcpack/mcaddon. Make sure that the Broblock pack is on top of the pack that you've configured, load it into Minecraft and tadah! you now have a working trades for all the packs You want to use.
+Convert the files into a .mcpack/mcaddon. Make sure that the Broblock pack is on top of the pack that you've configured, load it into Minecraft and tadah! You now have working trades for all the packs you want to use.
