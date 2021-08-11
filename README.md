@@ -12,7 +12,11 @@
 
   ![Wandering Trader](images/trading.png)
 
-  ![Broblock Crafting Recipe](images/recipe.png)
+  ![Broblock Crafting Recipe](images/crecipe.png)
+  
+> You can also dye the base color by holding a dye and right-clicking it.
+
+  ![Colors](images/colors.png)
 
 ### **Pack compatibility:**
 
