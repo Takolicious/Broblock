@@ -11,14 +11,15 @@
 >
 > Obtaining the block:
 > - Creative
->   - Using the commands, type in `/give @s brocraft:bblock`. *The block doesn't appear in the creative menu due to a reverted change*
+>   - Using commands, type in `/give @s brocraft:bblock`. *Note: The block doesn't appear in the creative menu due to a reverted change*
 > - Survival
->   - To obtain the block in Survival mode you'll first need to find a wandering trader that sells the **fist item** which you'll then craft into **Broblock** by in a 3x3 crafting grid with 1 Fist item, 1 Amethyst shard, 1 Gray concrete and 2 Smooth slabs. 
+>   - To obtain the block in Survival you'll first need to find a wandering trader that sells the **fist item** which you'll then craft into **Broblock**. In a 3x3 crafting grid put 1 Fist item, 1 Amethyst shard, 1 Gray concrete(not powder) and 2 Smooth slabs. 
+>   
 >   *Example:*
 >   
-> ![Wandering Trader](images/trading.png)
+>   ![Wandering Trader](images/trading.png)
 >
-> ![Broblock Crafting Recipe](images/crecipe.png)
+>   ![Broblock Crafting Recipe](images/crecipe.png)
 >  
 > - Dyeing
 >   - You can dye the base color whilst holding a dye and right clicking the block.
