@@ -2,7 +2,10 @@
 
 ## **How to Use:**
 
-> Turn on Experimental Gameplay
+> Make sure to turn on the following in your world setting under `Experiments`
+>  - Holiday Creator Features
+>  - Additional Modding Capabilities
+>  - Upcoming Creator Features
 >
 > Right-Click the Broblock to pick it up (right-clicking while sneaking won't work)
 >
