@@ -2,24 +2,28 @@
 
 ## **How to Use:**
 
-> Make sure to turn on the following in your world setting under `Experiments`
->  - Holiday Creator Features
->  - Additional Modding Capabilities
->  - Upcoming Creator Features
+> **Make sure to turn on the following in your world setting under `Experiments`**
+>  - **Holiday Creator Features**
+>  - **Additional Modding Capabilities**
+>  - **Upcoming Creator Features**
 >
-> Right-Click the Broblock to pick it up (right-clicking while sneaking won't work)
+> Picking up the block requires you to right-click it, sneaking while doing so won't work.
 >
-> To Obtain the Broblock. You'll need to find a wandering trader to trade the fist item which you'll then craft into Broblock.
-
-- _Broblock Crafting Recipe:_
-
-  ![Wandering Trader](images/trading.png)
-
-  ![Broblock Crafting Recipe](images/crecipe.png)
-  
-> You can also dye the base color by holding a dye and right-clicking it.
-
-  ![Colors](images/colors.png)
+> Obtaining the block:
+> - Creative
+>   - Using the commands, type in `/give @s brocraft:bblock`. *The block doesn't appear in the creative menu due to a reverted change*
+> - Survival
+>   - To obtain the block in Survival mode you'll first need to find a wandering trader that sells the **fist item** which you'll then craft into **Broblock** by in a 3x3 crafting grid with 1 Fist item, 1 Amethyst shard, 1 Gray concrete and 2 Smooth slabs. 
+>   *Example:*
+>   
+> ![Wandering Trader](images/trading.png)
+>
+> ![Broblock Crafting Recipe](images/crecipe.png)
+>  
+> - Dyeing
+>   - You can dye the base color whilst holding a dye and right clicking the block.
+>
+> ![Colors](images/colors.png)
 
 ### **Pack compatibility:**
 
