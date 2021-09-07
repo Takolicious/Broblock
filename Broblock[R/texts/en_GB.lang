@@ -1,8 +1,0 @@
-
-entity.brocraft:broblock.name=Broblock
-
-item.brocraft:fist_item.name=Fist
-
-action.interact.pickup=Pick Up
-
-tile.brocraft:bblock.name=§eBroblock
