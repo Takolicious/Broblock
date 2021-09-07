@@ -1,0 +1,902 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "brocraft:broblock",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "animations": {
+        "position_controller": "controller.animation.brocraft_bblock.position"
+      },
+      "scripts": {
+        "animate": ["position_controller"]
+      }
+    },
+    "component_groups": {
+      "brocraft:purple": {
+        "minecraft:variant": {
+          "value": 5
+        }
+      },
+      "brocraft:black": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      },
+      "brocraft:blue": {
+        "minecraft:variant": {
+          "value": 4
+        }
+      },
+      "brocraft:brown": {
+        "minecraft:variant": {
+          "value": 3
+        }
+      },
+      "brocraft:cyan": {
+        "minecraft:variant": {
+          "value": 6
+        }
+      },
+      "brocraft:gray": {
+        "minecraft:variant": {
+          "value": 8
+        }
+      },
+      "brocraft:green": {
+        "minecraft:variant": {
+          "value": 2
+        }
+      },
+      "brocraft:light_blue": {
+        "minecraft:variant": {
+          "value": 12
+        }
+      },
+      "brocraft:lime": {
+        "minecraft:variant": {
+          "value": 10
+        }
+      },
+      "brocraft:magenta": {
+        "minecraft:variant": {
+          "value": 13
+        }
+      },
+      "brocraft:orange": {
+        "minecraft:variant": {
+          "value": 14
+        }
+      },
+      "brocraft:pink": {
+        "minecraft:variant": {
+          "value": 9
+        }
+      },
+      "brocraft:red": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      "brocraft:silver": {
+        "minecraft:variant": {
+          "value": 7
+        }
+      },
+      "brocraft:undyed": {
+        "minecraft:variant": {
+          "value": 16
+        }
+      },
+      "brocraft:white": {
+        "minecraft:variant": {
+          "value": 15
+        }
+      },
+      "brocraft:yellow": {
+        "minecraft:variant": {
+          "value": 11
+        }
+      },
+      "brocraft:sensor": {
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "is_altitude",
+                    "subject": "self",
+                    "operator": ">",
+                    "value": 256
+                  },
+                  {
+                    "test": "is_altitude",
+                    "subject": "self",
+                    "operator": "<",
+                    "value": 0
+                  }
+                ]
+              },
+              "target": "self",
+              "event": "brocraft:despawn"
+            }
+          ]
+        }
+      },
+      "brocraft:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "brocraft:default": {
+        "minecraft:skin_id": {
+          "value": 0
+        }
+      },
+      "brocraft:negativeY": {
+        "minecraft:skin_id": {
+          "value": 1
+        }
+      },
+      "brocraft:positiveY": {
+        "minecraft:skin_id": {
+          "value": 2
+        }
+      }
+    },
+    "events": {
+      "brocraft:turn_purple": {
+        "add": {
+          "component_groups": ["brocraft:purple"]
+        }
+      },
+      "brocraft:turn_black": {
+        "add": {
+          "component_groups": ["brocraft:black"]
+        }
+      },
+      "brocraft:turn_blue": {
+        "add": {
+          "component_groups": ["brocraft:blue"]
+        }
+      },
+      "brocraft:turn_brown": {
+        "add": {
+          "component_groups": ["brocraft:brown"]
+        }
+      },
+      "brocraft:turn_cyan": {
+        "add": {
+          "component_groups": ["brocraft:cyan"]
+        }
+      },
+      "brocraft:turn_gray": {
+        "add": {
+          "component_groups": ["brocraft:gray"]
+        }
+      },
+      "brocraft:turn_green": {
+        "add": {
+          "component_groups": ["brocraft:green"]
+        }
+      },
+      "brocraft:turn_light_blue": {
+        "add": {
+          "component_groups": ["brocraft:light_blue"]
+        }
+      },
+      "brocraft:turn_lime": {
+        "add": {
+          "component_groups": ["brocraft:lime"]
+        }
+      },
+      "brocraft:turn_magenta": {
+        "add": {
+          "component_groups": ["brocraft:magenta"]
+        }
+      },
+      "brocraft:turn_orange": {
+        "add": {
+          "component_groups": ["brocraft:orange"]
+        }
+      },
+      "brocraft:turn_pink": {
+        "add": {
+          "component_groups": ["brocraft:pink"]
+        }
+      },
+      "brocraft:turn_red": {
+        "add": {
+          "component_groups": ["brocraft:red"]
+        }
+      },
+      "brocraft:turn_silver": {
+        "add": {
+          "component_groups": ["brocraft:silver"]
+        }
+      },
+      "brocraft:turn_white": {
+        "add": {
+          "component_groups": ["brocraft:white"]
+        }
+      },
+      "brocraft:turn_yellow": {
+        "add": {
+          "component_groups": ["brocraft:yellow"]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "brocraft:sensor",
+            "brocraft:default",
+            "brocraft:undyed"
+          ]
+        }
+      },
+      "brocraft:despawn": {
+        "add": {
+          "component_groups": ["brocraft:despawn"]
+        }
+      },
+      "brocraft:default": {
+        "add": {
+          "component_groups": ["brocraft:default"]
+        }
+      },
+      "brocraft:negativeY": {
+        "add": {
+          "component_groups": ["brocraft:negativeY"]
+        }
+      },
+      "brocraft:positiveY": {
+        "add": {
+          "component_groups": ["brocraft:positiveY"]
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["majestic_blocks", "brocraft"]
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:push_through": {
+        "value": 1
+      },
+      "minecraft:collision_box": {
+        "width": 0.2,
+        "height": 0.2
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "deals_damage": false,
+            "cause": "all"
+          }
+        ]
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_altitude",
+                  "subject": "self",
+                  "operator": ">",
+                  "value": 256
+                },
+                {
+                  "test": "is_altitude",
+                  "subject": "self",
+                  "operator": "<",
+                  "value": 0
+                }
+              ]
+            },
+            "target": "self",
+            "event": "brocraft:despawn"
+          }
+        ]
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "interact_text": "action.interact.pickup",
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "value": false
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "amethyst_shard"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:0"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:1"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:2"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:3"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:4"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:5"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:6"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:7"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:8"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:9"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:10"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:11"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:12"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:13"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:14"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:15"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:16"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:17"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:18"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "operator": "!=",
+                    "value": "dye:19"
+                  }
+                ]
+              },
+              "target": "self",
+              "event": "brocraft:despawn"
+            },
+            "play_sounds": "pop",
+            "spawn_items": {
+              "table": "loot_tables/broblock.json"
+            }
+          },
+          {
+            "interact_text": "action.interact.position_NY",
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "value": "amethyst_shard"
+                  },
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player"
+                  }
+                ]
+              },
+              "target": "self",
+              "event": "brocraft:negativeY"
+            },
+            "use_item": false,
+            "play_sounds": "leashknot.place"
+          },
+          {
+            "interact_text": "action.interact.position_PY",
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "value": "amethyst_shard"
+                  },
+                  {
+                    "test": "is_sneaking",
+                    "subject": "player",
+                    "value": false
+                  }
+                ]
+              },
+              "target": "self",
+              "event": "brocraft:positiveY"
+            },
+            "use_item": false,
+            "play_sounds": "leashknot.place"
+          },
+          {
+            "interact_text": "action.interact.dye", // black
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "any_of": [
+                      {
+                        "test": "has_equipment",
+                        "subject": "player",
+                        "domain": "hand",
+                        "value": "dye:0"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "player",
+                        "domain": "hand",
+                        "value": "dye:16"
+                      }
+                    ]
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 0
+                  }
+                ]
+              },
+              "event": "brocraft:turn_black"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // gray
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:8"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 8
+                  }
+                ]
+              },
+              "event": "brocraft:turn_gray"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // silver
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:7"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 7
+                  }
+                ]
+              },
+              "event": "brocraft:turn_silver"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // white
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "any_of": [
+                      {
+                        "test": "has_equipment",
+                        "subject": "player",
+                        "domain": "hand",
+                        "value": "dye:15"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "player",
+                        "domain": "hand",
+                        "value": "dye:19"
+                      }
+                    ]
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 15
+                  }
+                ]
+              },
+              "event": "brocraft:turn_white"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // light blue
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:12"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 12
+                  }
+                ]
+              },
+              "event": "brocraft:turn_light_blue"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // orange
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:14"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 14
+                  }
+                ]
+              },
+              "event": "brocraft:turn_orange"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // red
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:1"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 1
+                  }
+                ]
+              },
+              "event": "brocraft:turn_red"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // blue
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "any_of": [
+                      {
+                        "test": "has_equipment",
+                        "subject": "player",
+                        "domain": "hand",
+                        "value": "dye:4"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "player",
+                        "domain": "hand",
+                        "value": "dye:18"
+                      }
+                    ]
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 4
+                  }
+                ]
+              },
+              "event": "brocraft:turn_blue"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // purple
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:5"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 5
+                  }
+                ]
+              },
+              "event": "brocraft:turn_purple"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // magenta
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:13"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 13
+                  }
+                ]
+              },
+              "event": "brocraft:turn_magenta"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // pink
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:9"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 9
+                  }
+                ]
+              },
+              "event": "brocraft:turn_pink"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // brown
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "any_of": [
+                      {
+                        "test": "has_equipment",
+                        "subject": "player",
+                        "domain": "hand",
+                        "value": "dye:3"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "player",
+                        "domain": "hand",
+                        "value": "dye:17"
+                      }
+                    ]
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 3
+                  }
+                ]
+              },
+              "event": "brocraft:turn_brown"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // yellow
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:11"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 11
+                  }
+                ]
+              },
+              "event": "brocraft:turn_yellow"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // lime
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:10"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 10
+                  }
+                ]
+              },
+              "event": "brocraft:turn_lime"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // green
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:2"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 2
+                  }
+                ]
+              },
+              "event": "brocraft:turn_green"
+            },
+            "use_item": true
+          },
+          {
+            "interact_text": "action.interact.dye", // cyan
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "player",
+                    "domain": "hand",
+                    "value": "dye:6"
+                  },
+                  {
+                    "test": "is_variant",
+                    "operator": "!=",
+                    "value": 6
+                  }
+                ]
+              },
+              "event": "brocraft:turn_cyan"
+            },
+            "use_item": true
+          }
+        ]
+      }
+    }
+  }
+}

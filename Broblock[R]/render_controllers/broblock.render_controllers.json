@@ -1,0 +1,34 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.brocraft.broblock": {
+      "arrays": {
+        "textures": {
+          "Array.colors": [
+            "Texture.black",
+            "Texture.red",
+            "Texture.green",
+            "Texture.brown",
+            "Texture.blue",
+            "Texture.purple",
+            "Texture.cyan",
+            "Texture.silver",
+            "Texture.gray",
+            "Texture.pink",
+            "Texture.lime",
+            "Texture.yellow",
+            "Texture.light_blue",
+            "Texture.magenta",
+            "Texture.orange",
+            "Texture.white",
+            "Texture.default"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [{ "*": "Material.default" }],
+
+      "textures": ["Array.colors[q.variant]"]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.brocraft_bblock.position": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "negative_Y": "query.skin_id == 1"
+            },
+            {
+              "positive_Y": "query.skin_id == 2"
+            }
+          ]
+        },
+        "negative_Y": {
+          "transitions": [
+            {
+              "default": "query.skin_id != 1"
+            }
+          ],
+          "on_entry": ["/tp ~ ~-0.5 ~", "@s brocraft:default"]
+        },
+        "positive_Y": {
+          "transitions": [
+            {
+              "default": "query.skin_id != 2"
+            }
+          ],
+          "on_entry": ["/tp @s ~ ~0.5 ~ ~", "@s brocraft:default"]
+        }
+      }
+    }
+  }
+}

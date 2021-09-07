@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "brocraft:broblock_recipe"
+    },
+    "tags": ["crafting_table"],
+    "pattern": ["#F#", "#A#", "SCS"],
+    "key": {
+      "F": {
+        "item": "brocraft:fist_item"
+      },
+      "A": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "S": {
+        "item": "minecraft:double_stone_slab"
+      },
+      "C": {
+        "item": "minecraft:concrete",
+        "data": 7
+      }
+    },
+    "result": {
+      "item": "brocraft:bblock"
+    }
+  }
+}

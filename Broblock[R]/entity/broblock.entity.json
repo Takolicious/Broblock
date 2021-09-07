@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "brocraft:broblock",
+      "materials": { "default": "entity_alphatest" },
+      "textures": {
+        "default": "textures/entity/broblock/broblock",
+        "black": "textures/entity/broblock/c0",
+        "red": "textures/entity/broblock/c1",
+        "green": "textures/entity/broblock/c2",
+        "brown": "textures/entity/broblock/c3",
+        "blue": "textures/entity/broblock/c4",
+        "purple": "textures/entity/broblock/c5",
+        "cyan": "textures/entity/broblock/c6",
+        "silver": "textures/entity/broblock/c7",
+        "gray": "textures/entity/broblock/c8",
+        "pink": "textures/entity/broblock/c9",
+        "lime": "textures/entity/broblock/c10",
+        "yellow": "textures/entity/broblock/c11",
+        "light_blue": "textures/entity/broblock/c12",
+        "magenta": "textures/entity/broblock/c13",
+        "orange": "textures/entity/broblock/c14",
+        "white": "textures/entity/broblock/c15"
+      },
+      "geometry": {
+        "default": "geometry.brocraft_broblock"
+      },
+      "animations": {
+        "spinning": "animation.brocraft.broblock.spinning"
+      },
+      "scripts": {
+        "animate": ["spinning"]
+      },
+      "enable_attachables": false,
+      "render_controllers": ["controller.render.brocraft.broblock"]
+    }
+  }
+}

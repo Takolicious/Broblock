@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Adds new epic block to the game;)\n§7by §6Tako\n§9discord.gg/6bvQGpkXjZ\n§7Repo:§8github.com/Takolicious/Broblock",
+    "name": "§dBroblock v1.1 [R]",
+    "uuid": "dea10822-e28d-43fe-991c-253b9caec371",
+    "version": [1, 2, 0],
+    "min_engine_version": [1, 17, 0]
+  },
+  "modules": [
+    {
+      "description": "Adds new epic block to the game;)\n§7by §6Tako\n§9discord.gg/6bvQGpkXjZ\n§7Repo:§8github.com/Takolicious/Broblock",
+      "type": "resources",
+      "uuid": "1dfec752-30ef-442d-b96d-6180ef5656b8",
+      "version": [1, 2, 0]
+    }
+  ]
+}

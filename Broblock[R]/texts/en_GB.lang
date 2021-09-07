@@ -1,0 +1,9 @@
+entity.brocraft:broblock.name=Broblock
+
+item.brocraft:fist_item.name=Fist
+
+action.interact.pickup=Pick Up
+action.interact.position_NY=Negative Y
+action.interact.position_PY=Positive Y
+
+tile.brocraft:bblock.name=§eBroblock§r
