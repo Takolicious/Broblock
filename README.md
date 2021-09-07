@@ -25,6 +25,10 @@
 >   - You can dye the base color whilst holding a dye and right clicking the block.
 >
 > ![Colors](images/colors.png)
+>
+> - Ajusting the Y position
+> 
+>    - You can adjust the block's Y position by holding an amethyst shard in your main hand and right-clicking it. Right-click to adjust +Y and right-click while sneaking to adjust the -Y pos.
 
 ### **Pack compatibility:**
 
@@ -41,9 +45,9 @@ Chose an addon of your choice, for this example we'll be using Foxy's Miniblocks
   "tiers": [
     {
       "groups": [
-        { //trades
+        {...
         },
-        { //trades
+        {...
         }
       ]
     }
